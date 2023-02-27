@@ -26,13 +26,14 @@ MAIN
 }
 
 .slider {
-    height: 18.75rem;
+    height: 21.875rem;
     width: 43.75rem;
     position: relative;
 }
 
 .item {
     height: 100%;
+    display: none;
 }
 
 .item img {
@@ -61,4 +62,8 @@ MAIN
 
 .next {
     bottom: .625rem;
+}
+
+.show {
+    display: block;
 }
