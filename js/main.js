@@ -15,3 +15,30 @@ for (let i = 0; i < imgs.length; i++) {
 const items = document.querySelectorAll('.item');
 // Aggiunta classe a un elemento per renderlo visibile
 items[active].classList.add('show');
+
+// Variabili per eventi
+const previous = document.querySelector('.previous');
+const next = document.querySelector('.next');
+
+// Evento previous
+previous.addEventListener('click',
+function() {
+    if (active > 0) {
+        items[active].classList.remove('show');
+        active--;
+        items[active].classList.add('show');
+    }
+}
+)
+
+// Evento next
+next.addEventListener('click',
+function() {
+    if (active < items.length - 1) {
+        items[active].classList.remove('show');
+        active++;
+        items[active].classList.add('show');
+    }
+}
+)
+

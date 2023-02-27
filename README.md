@@ -41,16 +41,21 @@ Inizio un ciclo FOR con i = 0, i minore della lunghezza dell'array imgs e increm
 Creo una variabile items con querySelectorAll sulla classe .item (div .item contenente una singola immagine) per ottenere una lista dei contenitori delle immagini
 Assegno all'elememto di items indicizzato active la classe show così da rendere visibile l'immagine dell'elemento indicizzato
 
+MILESTONE 3
+
+creo una variabile per l'evento previous con querySelector .previous
+creo una variabile per l'evento next con querySelector .next
+
+Inizio un evento click sulla freccia in alto per tornare indietro nelle immagini
+    SE active è maggiore di zero
+        Rimuovo dall'elemento indicizzato active la classe show
+        Decremento di uno active
+        Aggiungo all'elemento indicizzato active la classe show
+
 Inizio un evento click sulla freccia in basso per proseguire lo scorrere delle immagini
     SE active è minore della lunghezza di items - 1
         Rimuovo dall'elemento indicizzato active la classe show
         Incremento di uno active
-        Aggiungo all'elemento indicizzato active la classe show
-
-Inizio un evento click sulla freccia in alto per tornare indietro nell immagini
-    SE active è maggiore di zero
-        Rimuovo dall'elemento indicizzato active la classe show
-        Decremento di uno active
         Aggiungo all'elemento indicizzato active la classe show
 
 

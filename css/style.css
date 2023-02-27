@@ -67,3 +67,14 @@ MAIN
 .show {
     display: block;
 }
+
+/*
+--------
+EFFETTI
+--------
+*/
+
+.next:hover,
+.previous:hover {
+    cursor: pointer;
+}
