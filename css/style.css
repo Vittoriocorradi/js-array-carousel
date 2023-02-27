@@ -103,3 +103,7 @@ EFFETTI
 .previous:hover {
     cursor: pointer;
 }
+
+.thumbnail:hover {
+    cursor: pointer;
+}

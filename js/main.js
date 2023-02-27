@@ -10,7 +10,7 @@ const thumbNail = document.querySelector('.thumbnails');
 // Ciclo per immagini dinamiche
 for (let i = 0; i < imgs.length; i++) {
     slider.innerHTML += `<div class="item"><img src="img/${imgs[i]}" alt="Immagine ${i + 1}"></div>`;
-    thumbNail.innerHTML += `<div class="thumbnail shadow" id="thumbnail${i + 1}"><img src="img/${imgs[i]}" alt="Immagine ${i + 1}"></div>`;
+    thumbNail.innerHTML += `<div class="thumbnail shadow" id="${i + 1}"><img src="img/${imgs[i]}" alt="Immagine ${i + 1}"></div>`;
 }
 
 // Lista elementi nascosti
@@ -66,53 +66,65 @@ function() {
 
 // AddEventListener per cambiare immagine premendo sulle singole miniature
 
-const thumbNail1 = document.getElementById('thumbnail1');
-const thumbNail2 = document.getElementById('thumbnail2');
-const thumbNail3 = document.getElementById('thumbnail3');
-const thumbNail4 = document.getElementById('thumbnail4');
-const thumbNail5 = document.getElementById('thumbnail5');
+// const thumbNail1 = document.getElementById('thumbnail1');
+// const thumbNail2 = document.getElementById('thumbnail2');
+// const thumbNail3 = document.getElementById('thumbnail3');
+// const thumbNail4 = document.getElementById('thumbnail4');
+// const thumbNail5 = document.getElementById('thumbnail5');
 
-thumbNail1.addEventListener('click',
-function() {
+// thumbNail1.addEventListener('click',
+// function() {
+//     items[active].classList.remove('show');
+//     thumbNails[active].classList.add('shadow')
+//     active = 0;
+//     items[active].classList.add('show');
+//     thumbNails[active].classList.remove('shadow')
+// })
+
+// thumbNail2.addEventListener('click',
+// function() {
+//     items[active].classList.remove('show');
+//     thumbNails[active].classList.add('shadow')
+//     active = 1;
+//     items[active].classList.add('show');
+//     thumbNails[active].classList.remove('shadow')
+// })
+
+// thumbNail3.addEventListener('click',
+// function() {
+//     items[active].classList.remove('show');
+//     thumbNails[active].classList.add('shadow')
+//     active = 2;
+//     items[active].classList.add('show');
+//     thumbNails[active].classList.remove('shadow')
+// })
+
+// thumbNail4.addEventListener('click',
+// function() {
+//     items[active].classList.remove('show');
+//     thumbNails[active].classList.add('shadow')
+//     active = 3;
+//     items[active].classList.add('show');
+//     thumbNails[active].classList.remove('shadow')
+// })
+
+// thumbNail5.addEventListener('click',
+// function() {
+//     items[active].classList.remove('show');
+//     thumbNails[active].classList.add('shadow')
+//     active = 4;
+//     items[active].classList.add('show');
+//     thumbNails[active].classList.remove('shadow')
+// })
+
+thumbNail.addEventListener('click', function(e) {
+    let mini = (e.target.id);
+    
+    if (mini !== "") {
     items[active].classList.remove('show');
     thumbNails[active].classList.add('shadow')
-    active = 0;
+    active = mini - 1;
     items[active].classList.add('show');
     thumbNails[active].classList.remove('shadow')
-})
-
-thumbNail2.addEventListener('click',
-function() {
-    items[active].classList.remove('show');
-    thumbNails[active].classList.add('shadow')
-    active = 1;
-    items[active].classList.add('show');
-    thumbNails[active].classList.remove('shadow')
-})
-
-thumbNail3.addEventListener('click',
-function() {
-    items[active].classList.remove('show');
-    thumbNails[active].classList.add('shadow')
-    active = 2;
-    items[active].classList.add('show');
-    thumbNails[active].classList.remove('shadow')
-})
-
-thumbNail4.addEventListener('click',
-function() {
-    items[active].classList.remove('show');
-    thumbNails[active].classList.add('shadow')
-    active = 3;
-    items[active].classList.add('show');
-    thumbNails[active].classList.remove('shadow')
-})
-
-thumbNail5.addEventListener('click',
-function() {
-    items[active].classList.remove('show');
-    thumbNails[active].classList.add('shadow')
-    active = 4;
-    items[active].classList.add('show');
-    thumbNails[active].classList.remove('shadow')
-})
+    console.log(mini);}
+}, false);
