@@ -73,4 +73,39 @@ Inizio un evento click sulla freccia in basso per proseguire lo scorrere delle i
         Aggiungo all'elemento items indicizzato active la classe show
 
 
+BONUS 2
 
+
+Creo una variabile const thumbnail per rappresentare l'elemento "thumbnails"
+
+Inizio un ciclo FOR con i = 0, i minore della lunghezza dell'array imgs e incremento i++
+    Ad ogni iterazione andrò ad aggingere all'interno di thumbnail un div thumbnail contenitore con relativo file dell'immagine indicizzata i attraverso l'uso di template literal.
+
+Creo una variabile thumbnails con querySelectorAll sulla classe .thumbnail (div .thumbnail contenente una singola immagine) per ottenere una lista dei contenitori delle immagini
+Rimuovo all'elememto di thumbnails indicizzato active la classe shadow così da rendere non oscurata l'immagine dell'elemento indicizzato
+
+Inizio un evento click sulla freccia in alto per tornare indietro nelle immagini
+    SE active è maggiore di zero
+        Aggiungo all'elemento thumbnails indicizzato active la classe shadow
+        Decremento di uno active
+        Rimuovo dall'elemento thumbnails indicizzato active la classe shadow
+
+    BONUS 1
+
+    ALTRIMENTI
+        Aggiungo all'elemento thumbnails indicizzato active la classe shadow
+        attribuisco a active l'ultima indicizzazione possibile (thumbnails.length - 1)
+        Rimuovo dall'elemento thumbnails indicizzato active la classe shadow
+
+Inizio un evento click sulla freccia in basso per proseguire lo scorrere delle immagini
+    SE active è minore della lunghezza di thumbnails - 1
+        Aggiungo all'elemento thumbnails indicizzato active la classe shadow
+        Incremento di uno active
+        Rimuovo dall'elemento thumbnails indicizzato active la classe shadow
+
+    BONUS 1
+
+    ALTRIMENTI
+        Aggiungo all'elemento thumbnails indicizzato active la classe shadow
+        attribuisco a active la prima indicizzazione possibile (0)
+        Rimuovo dall'elemento thumbnails indicizzato active la classe shadow
