@@ -48,15 +48,29 @@ creo una variabile per l'evento next con querySelector .next
 
 Inizio un evento click sulla freccia in alto per tornare indietro nelle immagini
     SE active è maggiore di zero
-        Rimuovo dall'elemento indicizzato active la classe show
+        Rimuovo dall'elemento items indicizzato active la classe show
         Decremento di uno active
-        Aggiungo all'elemento indicizzato active la classe show
+        Aggiungo all'elemento items indicizzato active la classe show
+
+    BONUS 1
+
+    ALTRIMENTI
+        Rimuovo all'elemento items indicizzato active la classe show
+        attribuisco a active l'ultima indicizzazione possibile (items.length - 1)
+        Aggiungo all'elemento items indicizzato active la classe show
 
 Inizio un evento click sulla freccia in basso per proseguire lo scorrere delle immagini
     SE active è minore della lunghezza di items - 1
-        Rimuovo dall'elemento indicizzato active la classe show
+        Rimuovo dall'elemento items indicizzato active la classe show
         Incremento di uno active
-        Aggiungo all'elemento indicizzato active la classe show
+        Aggiungo all'elemento items indicizzato active la classe show
+
+    BONUS 1
+
+    ALTRIMENTI
+        Rimuovo all'elemento items indicizzato active la classe show
+        attribuisco a active la prima indicizzazione possibile (0)
+        Aggiungo all'elemento items indicizzato active la classe show
 
 
 

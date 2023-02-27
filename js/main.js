@@ -27,6 +27,10 @@ function() {
         items[active].classList.remove('show');
         active--;
         items[active].classList.add('show');
+    } else {
+        items[active].classList.remove('show');
+        active = items.length - 1;
+        items[active].classList.add('show');
     }
 }
 )
@@ -37,6 +41,10 @@ function() {
     if (active < items.length - 1) {
         items[active].classList.remove('show');
         active++;
+        items[active].classList.add('show');
+    } else {
+        items[active].classList.remove('show');
+        active = 0;
         items[active].classList.add('show');
     }
 }
